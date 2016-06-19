@@ -1,4 +1,4 @@
-from humanoidopt.env import humanoidoptenv
+from humanoidopt.env import HumanoidOptEnv
 
 from rllab.algos.trpo import TRPO
 from rllab.baselines.linear_feature_baseline import LinearFeatureBaseline
@@ -6,7 +6,7 @@ from rllab.baselines.linear_feature_baseline import LinearFeatureBaseline
 from rllab.envs.normalized_env import normalize
 from rllab.policies.gaussian_mlp_policy import GaussianMLPPolicy
 
-env = normalize(humanoidoptenv())
+env = normalize(HumanoidOptEnv())
 
 policy = GaussianMLPPolicy(
     env_spec=env.spec,
